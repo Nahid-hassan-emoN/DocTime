@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { BsCameraVideoFill } from "react-icons/bs";
 import DocCard from "../Components/DocCard";
 import HealthPack from "../Components/HealthPack";
+
 const UserProfile = () => {
   return (
     <>
@@ -289,16 +290,11 @@ const UserProfile = () => {
             <h4 className="content-title font-bold" data-v-2732e509="">
               Available for consultation
             </h4>
-            <Link to=""> See all</Link>
+            <Link to="/doctors"> See all</Link>
           </div>
-          <div className="row">
-            <div className="col-12">
-              <div className="doc-available-card gap-4 mt-3">
-                <DocCard />
-                <DocCard />
-                <DocCard />
-                <DocCard />
-              </div>
+          <div className="">
+            <div className="doc-available-card ">
+              <DocCard />
             </div>
           </div>
         </div>

@@ -4,13 +4,16 @@ import {
   BiArrowToRight,
   BiSolidUser,
   BiSolidKey,
+  BiSolidDonateBlood,
+  BiSolidMobile,
 } from "react-icons/bi";
+import { ImLocation2 } from "react-icons/im";
 import { Link } from "react-router-dom";
 
 const SignUp = () => {
   return (
     <>
-      <div className="container-xxl log_in">
+      <div className="container-xl sign_up">
         <div className="containeR ">
           <div className="screen">
             <div className="screen__content">
@@ -55,13 +58,33 @@ const SignUp = () => {
                     />
                   </div>
                   <div className=" row2nd">
-                    <i className="login__icon">
-                      <BiSolidKey />
+                    <i className="login_icon5">
+                      <ImLocation2 />
                     </i>
                     <input
                       type="password"
                       className="login__input"
-                      placeholder="Confirm Password"
+                      placeholder="Address"
+                    />
+                  </div>
+                  <div className=" row2nd">
+                    <i className="login_icon6">
+                      <BiSolidDonateBlood />
+                    </i>
+                    <input
+                      type="password"
+                      className="login__input"
+                      placeholder="Blood Group"
+                    />
+                  </div>
+                  <div className=" row2nd">
+                    <i className="login_icon7">
+                      <BiSolidMobile />
+                    </i>
+                    <input
+                      type="password"
+                      className="login__input"
+                      placeholder="Phone Number"
                     />
                   </div>
                 </div>

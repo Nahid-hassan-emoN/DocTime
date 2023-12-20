@@ -9,7 +9,7 @@ const fetchProducts = async () => {
   const data = await response.json();
   return data.users;
 };
-const DocCard = () => {
+const DocCardAll = () => {
   const {
     isLoading,
     error,
@@ -29,7 +29,7 @@ const DocCard = () => {
   return (
     <>
       <div className="doc-available-card grid grid-cols-4 gap-4 mt-3">
-        {users.slice(0, 8).map((user) => (
+        {users.map((user) => (
           <div key={user.id} className="doc-online-card position-relative">
             <div className="doc-online-img">
               <img src={user.image} alt="" />
@@ -77,4 +77,4 @@ const DocCard = () => {
   );
 };
 
-export default DocCard;
+export default DocCardAll;

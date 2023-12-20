@@ -8,9 +8,10 @@ import "swiper/css/free-mode";
 import "swiper/css/pagination";
 
 // import required modules
-import { FreeMode, Pagination } from "swiper/modules";
+import { FreeMode, Pagination, Autoplay } from "swiper/modules";
 import { Link } from "react-router-dom";
 import { TiTick } from "react-icons/ti";
+import "swiper/css/autoplay";
 
 const HealthPack = () => {
   return (
@@ -20,10 +21,15 @@ const HealthPack = () => {
           slidesPerView={3}
           spaceBetween={30}
           freeMode={true}
+          loop={true}
           pagination={{
             clickable: true,
           }}
-          modules={[FreeMode, Pagination]}
+          autoplay={{
+            delay: 3000, // 3 second
+            disableOnInteraction: false, // Allow manual interaction without stopping autoplay
+          }}
+          modules={[FreeMode, Pagination, Autoplay]}
           className="mySwiper"
         >
           <SwiperSlide>
